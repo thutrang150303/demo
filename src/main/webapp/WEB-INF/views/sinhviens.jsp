@@ -10,7 +10,7 @@
 <body class="container">
 <form:form action="" >
     <div class="form-group">
-        Ma nhan vien: <input name="maNhanVien">
+        Ma sinh vien: <input name="maSinhVien">
         <button type="submit">Search</button>
     </div>
 </form:form>

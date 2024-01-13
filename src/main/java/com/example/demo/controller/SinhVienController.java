@@ -31,7 +31,7 @@ public class SinhVienController {
     public String viewUpdate(@PathVariable("ma") String ma, Model model){
         SinhVien sinhVien = sinhVienService.detailSinhVien(ma);
         model.addAttribute("sinhVien1", sinhVien);
-        return "detail-sinh-vien";
+        return "detail-sinh-vien.jsp";
     }
 
     @GetMapping("/sinh-vien/view-update/{ma}")
@@ -63,5 +63,11 @@ public class SinhVienController {
                 .build();
         sinhVienService.addSinhVien(sinhVien);
         return "redirect:/sinh-vien/hien-thi";
+    }
+
+
+    @GetMapping("/sinh-vien/view-add")
+    public String viewAdd() {
+        return "add-sinh-vien";
     }
 }
